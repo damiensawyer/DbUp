@@ -20,7 +20,7 @@ namespace CoreTestApp
 	            date date not null
             );
 	
-	            CREATE TABLE cycleDamo
+	            CREATE TABLE cycle
             (
               id uuid not null,
               data json not null,
