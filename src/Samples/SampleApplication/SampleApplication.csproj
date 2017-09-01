@@ -33,6 +33,9 @@
   <PropertyGroup>
     <StartupObject>SampleApplication.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Core|AnyCPU'">
+    <OutputPath>bin\Core\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
