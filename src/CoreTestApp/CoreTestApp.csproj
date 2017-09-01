@@ -9,12 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="DbUp.Core">
-      <HintPath>..\..\..\fp21\src\fpDBUpCLI\lib\DbUp.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DBUp.Postgresql.Core">
-      <HintPath>..\..\..\fp21\src\fpDBUpCLI\lib\DBUp.Postgresql.Core.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Npgsql" Version="3.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DbUp.Core\DbUp.Core.csproj" />
+    <ProjectReference Include="..\DBUp.Postgresql.Core\DBUp.Postgresql.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Npgsql" Version="3.2.5" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DbUp.Core\DbUp.Core.csproj" />
   </ItemGroup>
 

@@ -7,7 +7,7 @@ namespace CoreTestApp
     {
         static void Main(string[] args)
         {
-            var cstring = "Host=127.0.0.1;Port=5432;Database=fromcore2;User Id=postgres;Password=postgres;";
+            var cstring = "Host=127.0.0.1;Port=5432;Database=fromcore3;User Id=postgres;Password=postgres;";
             EnsureDatabase.For.PostgresqlDatabase(cstring);
 
             var upgrader = DeployChanges.To
@@ -20,7 +20,7 @@ namespace CoreTestApp
 	            date date not null
             );
 	
-	            CREATE TABLE cycle
+	            CREATE TABLE cycleDamo
             (
               id uuid not null,
               data json not null,
