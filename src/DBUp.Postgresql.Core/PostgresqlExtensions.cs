@@ -30,6 +30,20 @@ public static class PostgresqlExtensions
     }
 
     /// <summary>
+    /// Tracks the list of executed scripts in a SQL Server table.
+    /// </summary>
+    /// <param name="builder">The builder.</param>
+    /// <param name="schema">The schema.</param>
+    /// <param name="table">The table.</param>
+    /// <returns></returns>
+    public static UpgradeEngineBuilder JournalToPostgresTable(this UpgradeEngineBuilder builder, string schema, string table)
+    {
+        builder.Configure(c => c.Journal = new PostgresqlTableJournal(() => c.ConnectionManager, () => c.Log, schema, table));
+        return builder;
+    }
+
+
+    /// <summary>
     /// Creates an upgrader for PostgreSQL databases.
     /// </summary>
     /// <param name="connectionManager">The <see cref="PostgresqlConnectionManager"/> to be used during a database upgrade.</param>
